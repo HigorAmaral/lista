@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="3.js" />
+    <link rel="stylesheet" href="2.css" />
+    <script src="3.js"></script>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="estilo">
+        <form>
+
+            <div class="valor">
+                <label for="txtValorA">Massa</label>
+                <input type="number" name="Massa" id="Massa" />
+            </div>
+
+            <div class="valor">
+                <label for="txtValorA">Altura</label>
+                <input type="number" step="0.1" name="Altura" id="Altura" />
+            </div>
+
+            <div class="Soma">
+                <label for="calcular">Resultado</label>
+                <input type="number" name="Resultado" id="Resultado" disabled />
+            </div>
+
+            <div class="classificacao">
+                <label for="calcular">classificacao</label>
+                <input type="text" name="Resultado" id="classificacao" disabled />
+            </div>
+
+            <div class="valorInativo">
+                <input type="button" value="calcular" onclick="click_calcular()" />
+                <input type="button" value="limpar" onclick="click_limpar()" />
+
+        </form>
+    </div>
+    </div>
+
+</body>
+
+
+</html>
