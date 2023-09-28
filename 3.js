@@ -1,46 +1,26 @@
 function click_calcular() {
-    let Massa = document.getElementById("Massa").value;
-    let Altura = document.getElementById("Altura").value;
-    let resultado;
+    let ValorA = Number(document.getElementById('ValorA').value);
+    let ValorB = Number(document.getElementById('ValorB').value);
+    let ValorC = Number(document.getElementById('ValorC').value);
 
-    if (Massa == "") {
-        alert(`Informe uma massa`);
-    } else if (Altura == "") {
-        alert(`Informe uma altura`);
+    let Delta = ValorB * ValorB - 4 * ValorA * ValorC;
+
+    if (Delta > 0) {
+        let x1 = (-ValorB + Math.sqrt(Delta)) / (2 * ValorA);
+        let x2 = (-ValorB - Math.sqrt(Delta)) / (2 * ValorA);
+
+        document.getElementById('resposta').innerHTML = `x1 = ${x1} <br>x2 = ${x2}`;
+    } else if (Delta === 0) {
+        let x1 = -ValorB / (2 * ValorA);
+        document.getElementById('resposta').innerHTML = `x1 = ${x1}`;
     } else {
-        resultado = Number(Massa) / (Number(Altura) * Number(Altura));
-        document.getElementById("Resultado").value = resultado.toFixed(2);
-    }
-
-    if (resultado <= 0) {
-        document.getElementById("classificacao").value = "palito"
-    } 
-    else if (resultado <= 17) {
-        document.getElementById("classificacao").value = "palito com um pouco de gordura"
-    } 
-    else if (resultado <= 18.49) {
-        document.getElementById("classificacao").value = "Abaixo do Peso"
-    } 
-    else if (resultado <= 24.99) {
-        document.getElementById("classificacao").value = "Peso Normal"
-    } 
-    else if (resultado <= 29.99) {
-        document.getElementById("classificacao").value = "Acima do Peso"
-    } 
-    else if (resultado <= 34.99) {
-        document.getElementById("classificacao").value = "Obesidade nivel 1"
-    } 
-    else if (resultado <= 39.99) {
-        document.getElementById("classificacao").value = "Obesidade nivel 2"
-    } 
-            else {
-        document.getElementById("classificacao").value = "Obesidade nivel 3"
+        document.getElementById('resposta').innerHTML = 'A equação não possui raízes reais (Δ < 0)';
     }
 }
-
 function click_limpar() {
-    document.getElementById("Massa").value = "";
-    document.getElementById("Altura").value = "";
-    document.getElementById("Resultado").value = "";
-    document.getElementById("classificação").value = ""; 
+    document.getElementById(`ValorA`).value = ``;
+    document.getElementById(`ValorB`).value = ``;
+    document.getElementById(`ValorC`).value = ``;
+    document.getElementById(`resposta`).innerHTML = ``;
+
 }

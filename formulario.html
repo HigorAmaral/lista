@@ -2,47 +2,33 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="3.js" />
-    <link rel="stylesheet" href="2.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bhaskara</title>
     <script src="3.js"></script>
-    <title>Calculadora</title>
+    <link rel="stylesheet" href="2.css">
 </head>
-
 <body>
-    <div class="estilo">
-        <form>
-
-            <div class="valor">
-                <label for="txtValorA">Massa</label>
-                <input type="number" name="Massa" id="Massa" />
-            </div>
-
-            <div class="valor">
-                <label for="txtValorA">Altura</label>
-                <input type="number" step="0.1" name="Altura" id="Altura" />
-            </div>
-
-            <div class="Soma">
-                <label for="calcular">Resultado</label>
-                <input type="number" name="Resultado" id="Resultado" disabled />
-            </div>
-
-            <div class="classificacao">
-                <label for="calcular">classificacao</label>
-                <input type="text" name="Resultado" id="classificacao" disabled />
-            </div>
-
-            <div class="valorInativo">
-                <input type="button" value="calcular" onclick="click_calcular()" />
-                <input type="button" value="limpar" onclick="click_limpar()" />
-
-        </form>
-    </div>
-    </div>
-
+    <div class="tudo">
+      <div class="titulo">
+           <h1>Calculadora de bhaskara</h1>
+       </div>
+     <form>
+       
+       <div id="valores">
+         <input placeholder="Insira o ValorA" type="number" name="ValorA" id="ValorA" />
+         <input placeholder="Insira o ValorB" type="number" name="ValorB" id="ValorB" />
+         <input placeholder="Insira o ValorC" type="number" name="ValorC" id="ValorC" />
+       </div>
+       <div class="valorInativo">
+           <input type="button" value="calcular" onclick="click_calcular()" />
+           <input type="button" value="limpar" onclick="click_limpar()" />
+       </div>
+       <div id="resposta">
+       </div>
+     </form>
+   </div>
+   
 </body>
-
 
 </html>
